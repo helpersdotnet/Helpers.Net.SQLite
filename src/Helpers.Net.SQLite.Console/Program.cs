@@ -1,10 +1,12 @@
 ﻿
-namespace Helpers.Net.SQLite.Console
+namespace Helpers.Net.SQLite
 {
     class Program
     {
-        static void Main(string[] args)
+        static int Main(string[] args)
         {
+            SQLiteConsole consoleApp = new SQLiteConsole(args);
+            return consoleApp.Execute();
         }
     }
 }

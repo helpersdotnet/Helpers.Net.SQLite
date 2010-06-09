@@ -8,7 +8,7 @@
     <ProjectGuid>{457D89F8-BB64-46CF-923E-846EE700174B}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Helpers.Net.SQLite.Console</RootNamespace>
+    <RootNamespace>Helpers.Net.SQLite</RootNamespace>
     <AssemblyName>aspnet_regsqlite</AssemblyName>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -38,6 +38,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SQLiteConsole.cs" />
     <Compile Include="Options.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
