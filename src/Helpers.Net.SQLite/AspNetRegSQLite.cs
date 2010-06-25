@@ -7,29 +7,78 @@ namespace Helpers.Net.SQLite
 {
     public class AspNetRegSQLite
     {
+        private readonly bool _isDotNetStyleHelp;
+
+        #region Command Line Options
+
         public bool ShowHelp { get; set; }
-
+        public bool EnableQuietMode { get; set; }
         public IEnumerable<string> Extra { get; set; }
+        public string ConnectionString { get; set; }
+        public string SqlFileName { get; set; }
 
-        public AspNetRegSQLite(string args) : this(args.Split(' ')) { }
+        private readonly OptionSet _optionSet;
+
+        #endregion
+
+        public AspNetRegSQLite()
+        {
+#if DOTNETSTYLE_HELP
+            _isDotNetStyleHelp = true;
+#endif
+        }
+
+        public AspNetRegSQLite(string args) :
+            this(args.Split(' '))
+        {
+
+        }
 
         public AspNetRegSQLite(IEnumerable<string> args)
+            : this()
         {
-            OptionSet p = new OptionSet()
-                .Add("h|?|help", delegate(string v) { ShowHelp = true; });
-            Extra = p.Parse(args);
+            _optionSet = new OptionSet
+                             {
+                                 {
+                                     "?|h|help", "Display this help text.", 
+                                     v => ShowHelp = v != null
+                                 },
+                                 {
+                                     "c|connectionString=", "Connection string to SQLite database file.",
+                                     v => ConnectionString = v 
+                                 },
+                                 {
+                                     "sqlexportonly=", "Generate the SQL script file for adding or removing the specified features and do not carry out the actual operation.",
+                                     v => SqlFileName = v 
+                                 },
+                                 {
+                                     "q|quiet", "Quiet mode; do not display confirmation to remove a feature.",
+                                     v => EnableQuietMode = v != null 
+                                 }
+                             };
+
+            Extra = _optionSet.Parse(args);
         }
 
         public int Execute()
         {
             if (ShowHelp)
             {
-                Console.WriteLine(HelpText);
+                WriteHelpText(_isDotNetStyleHelp);
                 return 0;
             }
-
-            Console.WriteLine(HelpText);
+            WriteHelpText(_isDotNetStyleHelp);
             return 0;
+        }
+
+        private void WriteHelpText(bool dotnetStyle)
+        {
+            if (dotnetStyle)
+                Console.WriteLine(HelpText);
+            else
+            {
+                _optionSet.WriteOptionDescriptions(Console.Out);
+            }
         }
 
         public string HelpText
