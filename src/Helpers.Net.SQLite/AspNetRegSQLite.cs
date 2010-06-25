@@ -5,13 +5,15 @@ using System.Text;
 
 namespace Helpers.Net.SQLite
 {
-    public class SQLiteConsole
+    public class AspNetRegSQLite
     {
         public bool ShowHelp { get; set; }
 
         public IEnumerable<string> Extra { get; set; }
 
-        public SQLiteConsole(IEnumerable<string> args)
+        public AspNetRegSQLite(string args) : this(args.Split(' ')) { }
+
+        public AspNetRegSQLite(IEnumerable<string> args)
         {
             OptionSet p = new OptionSet()
                 .Add("h|?|help", delegate(string v) { ShowHelp = true; });
@@ -86,7 +88,6 @@ namespace Helpers.Net.SQLite
                 sb.AppendFormat("{0,-16} w: SQLite Web event provider{1}", string.Empty, Environment.NewLine);
                 sb.AppendLine();
                 sb.AppendFormat("{0,-16} Quiet mode; do not display confirmation to remove a feature.{1}", "-Q", Environment.NewLine);
-
 
                 return sb.ToString();
             }

@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helpers.Net.SQLite", "Helpers.Net.SQLite\Helpers.Net.SQLite.csproj", "{43374AA4-8D71-4BAA-8543-66310FC3D5F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helpers.Net.SQLite.Console", "Helpers.Net.SQLite.Console\Helpers.Net.SQLite.Console.csproj", "{457D89F8-BB64-46CF-923E-846EE700174B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helpers.Net.Console.Tests", "Helpers.Net.Console.Tests\Helpers.Net.Console.Tests.csproj", "{8100D0FD-040E-49E2-8497-DA7E5F3DA897}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aspnet_regsqlite", "aspnet_regsqlite\aspnet_regsqlite.csproj", "{D87ACCD8-3578-4AFA-AAB6-ACCCFD931F8B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,16 +27,26 @@ Global
 		{43374AA4-8D71-4BAA-8543-66310FC3D5F6}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{43374AA4-8D71-4BAA-8543-66310FC3D5F6}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{43374AA4-8D71-4BAA-8543-66310FC3D5F6}.Release|x86.ActiveCfg = Release|Any CPU
-		{457D89F8-BB64-46CF-923E-846EE700174B}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{457D89F8-BB64-46CF-923E-846EE700174B}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
-		{457D89F8-BB64-46CF-923E-846EE700174B}.Debug|Mixed Platforms.Build.0 = Debug|x86
-		{457D89F8-BB64-46CF-923E-846EE700174B}.Debug|x86.ActiveCfg = Debug|x86
-		{457D89F8-BB64-46CF-923E-846EE700174B}.Debug|x86.Build.0 = Debug|x86
-		{457D89F8-BB64-46CF-923E-846EE700174B}.Release|Any CPU.ActiveCfg = Release|x86
-		{457D89F8-BB64-46CF-923E-846EE700174B}.Release|Mixed Platforms.ActiveCfg = Release|x86
-		{457D89F8-BB64-46CF-923E-846EE700174B}.Release|Mixed Platforms.Build.0 = Release|x86
-		{457D89F8-BB64-46CF-923E-846EE700174B}.Release|x86.ActiveCfg = Release|x86
-		{457D89F8-BB64-46CF-923E-846EE700174B}.Release|x86.Build.0 = Release|x86
+		{8100D0FD-040E-49E2-8497-DA7E5F3DA897}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8100D0FD-040E-49E2-8497-DA7E5F3DA897}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8100D0FD-040E-49E2-8497-DA7E5F3DA897}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{8100D0FD-040E-49E2-8497-DA7E5F3DA897}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{8100D0FD-040E-49E2-8497-DA7E5F3DA897}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8100D0FD-040E-49E2-8497-DA7E5F3DA897}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8100D0FD-040E-49E2-8497-DA7E5F3DA897}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8100D0FD-040E-49E2-8497-DA7E5F3DA897}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{8100D0FD-040E-49E2-8497-DA7E5F3DA897}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{8100D0FD-040E-49E2-8497-DA7E5F3DA897}.Release|x86.ActiveCfg = Release|Any CPU
+		{D87ACCD8-3578-4AFA-AAB6-ACCCFD931F8B}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{D87ACCD8-3578-4AFA-AAB6-ACCCFD931F8B}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{D87ACCD8-3578-4AFA-AAB6-ACCCFD931F8B}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{D87ACCD8-3578-4AFA-AAB6-ACCCFD931F8B}.Debug|x86.ActiveCfg = Debug|x86
+		{D87ACCD8-3578-4AFA-AAB6-ACCCFD931F8B}.Debug|x86.Build.0 = Debug|x86
+		{D87ACCD8-3578-4AFA-AAB6-ACCCFD931F8B}.Release|Any CPU.ActiveCfg = Release|x86
+		{D87ACCD8-3578-4AFA-AAB6-ACCCFD931F8B}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{D87ACCD8-3578-4AFA-AAB6-ACCCFD931F8B}.Release|Mixed Platforms.Build.0 = Release|x86
+		{D87ACCD8-3578-4AFA-AAB6-ACCCFD931F8B}.Release|x86.ActiveCfg = Release|x86
+		{D87ACCD8-3578-4AFA-AAB6-ACCCFD931F8B}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

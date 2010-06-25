@@ -5,7 +5,7 @@ namespace Helpers.Net.SQLite
     {
         static int Main(string[] args)
         {
-            SQLiteConsole consoleApp = new SQLiteConsole(args);
+            AspNetRegSQLite consoleApp = new AspNetRegSQLite(args);
             return consoleApp.Execute();
         }
     }
