@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Helpers.Net.SQLite")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("aspnet_regsql for SQLite")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Prabir Shrestha")]
 [assembly: AssemblyProduct("Helpers.Net.SQLite")]
